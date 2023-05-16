@@ -41,11 +41,34 @@ public class EmployeeWageComputation
             w = EmpRatePerHr * EmpHrs;
             System.out.println("PartTime employee and Employee Wage is :-" + w);
         }
-        else if(Attend1==0)
+        else if(Attend1==0 && Attend2 == 0  )
+        {
+            System.out.println("Employee Wage is :-0");
+        }
+        else if(Attend1==0 && Attend2 == 1)
         {
             System.out.println("Employee Wage is :-0");
         }
 
+
+    }
+    void switchStatement()
+    {
+        switch (Attend2)
+        {
+            case 1:
+                EmpRatePerHr = 20;
+                EmpHrs = 8;
+                w = EmpRatePerHr * EmpHrs;
+                System.out.println("Using Switch Statement ----------Employee Wage:-" + w);
+                break;
+            case 0:
+                EmpRatePerHr = 20;
+                EmpHrs = 4;
+                w = EmpRatePerHr * EmpHrs;
+                System.out.println("Using Switch Statement ----------Employee Wage:-" + w);
+                break;
+        }
     }
     public static void main(String[] args)
     {
@@ -53,6 +76,7 @@ public class EmployeeWageComputation
         EmployeeWageComputation E = new EmployeeWageComputation();
         E.attendance();
         E.wage();
+        E.switchStatement();
 
 
     }
