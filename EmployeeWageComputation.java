@@ -57,7 +57,7 @@ public class EmployeeWageComputation
         switch (Attend2)
         {
             case 1:
-                EmpRatePerHr = 20;
+                EmpRatePerHr = 50;
                 EmpHrs = 8;
                 w = EmpRatePerHr * EmpHrs;
                 System.out.println("Using Switch Statement ----------Employee Wage:-" + w);
@@ -70,6 +70,19 @@ public class EmployeeWageComputation
                 break;
         }
     }
+    int a = 20;               //Total working days
+    int sal = 0;
+    void monthSalary()
+    {
+        EmpRatePerHr = 20;
+        EmpHrs = 8;
+        for (int day = 1; day <= a; day++)
+        {
+            sal = sal + (EmpRatePerHr * EmpHrs);
+        }
+        System.out.println("salary of month:-"+sal);
+
+    }
     public static void main(String[] args)
     {
         System.out.println("Welcome to Employee Wage Computation Program");
@@ -77,6 +90,7 @@ public class EmployeeWageComputation
         E.attendance();
         E.wage();
         E.switchStatement();
+        E.monthSalary();
 
 
     }
